@@ -18,12 +18,13 @@ I used Micromodal and Splide javascript libraries (publicly available) to implem
 
 
 TO RUN:
-1) Download the code
-```
-git clone https://github.com/srivalli2017/WS-Coding-Challenge.git
-cd wsi-coding-challenge
-```
-2) Just need to open the index.html file directly to view the application.
+
+If you'd like to run this project locally, clone the repo and then:
+
+1. `git clone https://github.com/srivalli2017/WS-Coding-Challenge.git` to download the code
+2. `yarn install` (or `npm install`) to install dependencies
+3. `yarn start` (or `npm start`) to preview the app locally
+4. `yarn test` (or `npm test`) to run the tests
 
 
 Presentation:
@@ -55,9 +56,5 @@ This is the Mobile view with overlay with a carousal of all thumbnail images
 
 I've used Jest and `@testing-library/react`to write unit tests to test a UI that was created.
 
-If you'd like to run this project locally, clone the repo and then:
 
-1. `yarn install` (or `npm install`) to install dependencies
-2. `yarn start` (or `npm start`) to preview the app locally
-3. `yarn test` (or `npm test`) to run the tests
 
