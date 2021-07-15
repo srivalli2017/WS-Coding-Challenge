@@ -54,7 +54,7 @@ This is the Mobile view with overlay with a carousal of all thumbnail images
 ## Testing
 
 
-I've used Jest and `@testing-library/react`to write unit tests to test a UI that was created.
+'ve used Jest and `@testing-library/react`to write unit tests to test the basic functionality of the application. Since the application is all cleint side, there are not too many test cases that I could execute. But I picked the following testcases and successfully tested them.
 
 
 
