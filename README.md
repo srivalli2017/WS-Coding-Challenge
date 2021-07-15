@@ -1,12 +1,59 @@
-# DOM Testing Demo
 
-This is an experimental project for testing HTML and vanilla JS with Jest and `@testing-library/dom`. You can [read my article on Medium](https://levelup.gitconnected.com/how-to-unit-test-html-and-vanilla-javascript-without-a-ui-framework-c4c89c9f5e56?source=friends_link&sk=15836e19406fd422a13411e3ef497c0d) about this project as well.
+# WS-Coding-Challenge
+Williams Sonoma Coding Challenge
 
-## Motivation
+Submitted by Srivalli Kompella
 
-I've used Jest and `@testing-library/react` alongside React extensively in professional and personal projects, but I've never tried writing unit tests to test a UI that was created *without* any UI frameworks or libraries.
+Given a JSON file of products, build a page that displays for each product:
 
-## Development
+product image
+product name
+product price
+Display all products on a multi-column, responsive, accessible, and attractive page. Upon selection of a product image, display an overlay containing a carousel of product images.
+
+
+The project is built entirely using vanilla javascript.
+
+I used Micromodal and Splide javascript libraries (publicly available) to implement the carousal functionality.
+
+
+TO RUN:
+1) Download the code
+```
+git clone https://github.com/srivalli2017/WS-Coding-Challenge.git
+cd wsi-coding-challenge
+```
+2) Just need to open the index.html file directly to view the application.
+
+
+Presentation:
+Lets walk through how a user would be presented the page:
+
+As we open the page we see a list of all the prodcuts that we take from the JSON.
+a. Each product tile lists the name and price and sale price below the hero image of the product.
+b. When the user clicks anywhere on the tile, the carousal opens up with all the product's images. 
+c. If the product doesn't have any images, the carousal doesn't open up.
+d. If it has images, user can click on previous or next buttons to navigate across the images.
+
+
+
+
+The Responsiveness works as the Desktop view has 3 columns of products and Mobile has 1 column of products. I have attached my final result of the responsiveness.
+
+This is the Desktop View overlay with a carousal of all thumbnail images
+
+![Desktop view](https://user-images.githubusercontent.com/87400434/125565615-d2f744da-2621-46d6-a52e-16e5ef969516.JPG)
+
+This is the Mobile view with overlay with a carousal of all thumbnail images
+
+![mobile view](https://user-images.githubusercontent.com/87400434/125567573-5f6e7e88-046e-42db-adba-f2f40292fc66.JPG)
+
+
+
+## Testing
+
+
+I've used Jest and `@testing-library/react`to write unit tests to test a UI that was created.
 
 If you'd like to run this project locally, clone the repo and then:
 
@@ -14,10 +61,3 @@ If you'd like to run this project locally, clone the repo and then:
 2. `yarn start` (or `npm start`) to preview the app locally
 3. `yarn test` (or `npm test`) to run the tests
 
-## Docs and Resources
-
-- [My Medium Article](https://levelup.gitconnected.com/how-to-unit-test-html-and-vanilla-javascript-without-a-ui-framework-c4c89c9f5e56?source=friends_link&sk=15836e19406fd422a13411e3ef497c0d)
-- [DOM Testing Library Docs](https://testing-library.com/docs/dom-testing-library/intro)
-- [JSDOM Docs](https://github.com/jsdom/jsdom#executing-scripts)
-- [dev.to Article I Found During Research](https://dev.to/snowleo208/things-i-learned-after-writing-tests-for-js-and-html-page-4lja)
-- [DOM Testing Library Forum Question](https://spectrum.chat/testing-library/help-dom/test-plain-html-vanilla-js~9f56a169-ea3f-481b-b1cc-dd9fc70dbeaf)
