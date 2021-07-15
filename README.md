@@ -17,7 +17,7 @@ The project is built entirely using vanilla javascript.
 I used Micromodal and Splide javascript libraries (publicly available) to implement the carousal functionality.
 
 
-TO RUN:
+## TO RUN:
 
 If you'd like to run this project locally, clone the repo and then:
 
@@ -27,7 +27,7 @@ If you'd like to run this project locally, clone the repo and then:
 4. `yarn test` (or `npm test`) to run the tests
 
 
-Presentation:
+## Presentation:
 Lets walk through how a user would be presented the page:
 
 As we open the page we see a list of all the prodcuts that we take from the JSON.
