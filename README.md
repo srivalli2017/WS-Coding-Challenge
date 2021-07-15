@@ -57,4 +57,25 @@ This is the Mobile view with overlay with a carousal of all thumbnail images
 've used Jest and `@testing-library/react`to write unit tests to test the basic functionality of the application. Since the application is all cleint side, there are not too many test cases that I could execute. But I picked the following testcases and successfully tested them.
 
 
+## Data Fetch
+
+A normal fetch function to get the JSON data gave me the error saying "No Access-Control-Allow-Origin header". This is because the server does not have CORS enabled.
+So I used the following code to access the data through a proxy server:
+
+`npm install -g local-cors-proxy`
+`lcp --proxyUrl https://www.westelm.com` to start the proxy.
+This is shown:
+```
+ Proxy Active 
+
+ Proxy Url: http://www.yourdomain.com:28080
+ Proxy Partial: proxy
+ PORT: 8010
+```
+
+Then hit the following proxy API endpoint to get the data:
+`http://localhost:8010/proxy/services/catalog/v4/category/shop/new/all-new/index.json`
+
+instead of 
+`https://www.westelm.com/services/catalog/v4/category/shop/new/all-new/index.json`
 
