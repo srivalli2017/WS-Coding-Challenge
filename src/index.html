@@ -1,0 +1,863 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+  <title>Product Page</title>
+  <link
+    href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900'
+    rel='stylesheet' type='text/css'>
+  <style>
+    html,
+    body {
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .products {
+      width: 32%;
+      height: auto;
+      margin-right: 0.65%;
+      margin-left: 0.65%;
+      margin-bottom: 15px;
+      background-color: #fff;
+      box-shadow: 0px 0px 2px #000;
+      border-radius: 4px;
+      cursor: pointer;
+      overflow: hidden;
+    }
+
+    .products:hover {
+      transition: all 0.2s ease-in;
+      box-shadow: 0px 0px 5px #000;
+    }
+
+    .product-text-region {
+      padding: 10px;
+    }
+
+    .products img {
+      width: 100%;
+    }
+
+    .product-wrapper {
+      flex: 1;
+      flex-direction: row;
+      width: 100%;
+      height: auto;
+      flex-wrap: wrap;
+      overflow: hidden;
+      display: flex;
+    }
+
+    .product-price-regular {
+      color: black;
+      font-size: 10pt;
+    }
+
+    .product-price-sale {
+      color: green;
+      font-size: 10pt;
+    }
+
+    .product-name {
+      font-size: 14pt;
+    }
+
+    .modal__title {
+      margin-right: 20px;
+    }
+
+    .splide__slide img {
+      width: 100%;
+      height: auto;
+    }
+
+    @media screen and (max-width: 768px) {
+      .products {
+        width: 90%;
+        height: auto;
+        margin-bottom: 15px;
+        background-color: #fff;
+      }
+
+      .product-wrapper {
+        flex: 1;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="./micromodal.css" />
+  <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+
+</head>
+
+<body>
+  <div class="product-wrapper" id="product-list">
+  </div>
+  <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+        <header class="modal__header">
+          <h2 class="modal__title" id="modal-1-title">
+            Modal Title
+          </h2>
+          <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+        </header>
+        <div class="modal__content" id="modal-1-content">
+          <div class="splide">
+            <div class="splide__track">
+              <ul class="splide__list" id="splide__list">
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="micromodal.min.js"></script>
+  
+  <script src="http://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+  <script>
+
+    // MicroModal.init()
+    const data = {
+      groups: [
+        {
+          'id': 'keira-expandable-dining-table-h8815',
+          'name': 'Keira Expandable Dining Table',
+          'links': {
+            'www': 'https://www.westelm.com/products/keira-expandable-dining-table-h8815/'
+          },
+          'priceRange': {
+            'selling': {
+              'high': 1299,
+              'low': 1199
+            }
+          },
+          'thumbnail': {
+            'size': 'm',
+            'meta': '',
+            'alt': '',
+            'rel': 'thumbnail',
+            'width': 363,
+            'href': 'https://assets.weimgs.com/weimgs/ab/images/wcm/products/202128/0341/keira-expandable-dining-table-m.jpg',
+            'height': 363
+          },
+          'hero': {
+            'size': 'm',
+            'meta': '',
+            'alt': '',
+            'rel': 'hero',
+            'width': 363,
+            'href': 'https://assets.weimgs.com/weimgs/ab/images/wcm/products/202128/0341/keira-expandable-dining-table-m.jpg',
+            'height': 363
+          },
+          'images': [
+            {
+              'size': 'm',
+              'meta': '',
+              'alt': '',
+              'rel': 'althero',
+              'width': 363,
+              'href': 'https://assets.weimgs.com/weimgs/ab/images/wcm/products/202128/0341/keira-expandable-dining-table-1-m.jpg',
+              'height': 363
+            }
+          ],
+          'swatches': [],
+          'messages': [],
+          'flags': [
+            {
+              'bopisSuppress': false,
+              'rank': 3,
+              'id': 'newcore'
+            }
+          ],
+          'reviews': {
+            'recommendationCount': 0,
+            'likelihood': 0,
+            'reviewCount': 0,
+            'averageRating': 0,
+            'id': 'keira-expandable-dining-table-h8815',
+            'type': 'GROUP_REVIEWS'
+          }
+        },
+        {
+          'id': 'reid-utensil-holder-d12402',
+          'name': 'Reid Utensil Holder',
+          'links': {
+            'www': 'https://www.westelm.com/products/reid-utensil-holder-d12402/'
+          },
+          'price': {
+            'regular': 34,
+            'selling': 34
+          },
+          'thumbnail': {
+            'size': 'm',
+            'meta': '',
+            'alt': '',
+            'rel': 'thumbnail',
+            'width': 363,
+            'href': 'https://assets.weimgs.com/weimgs/ab/images/wcm/products/202127/0471/reid-utensil-holder-m.jpg',
+            'height': 363
+          },
+          'hero': {
+            'size': 'm',
+            'meta': '',
+            'alt': '',
+            'rel': 'hero',
+            'width': 363,
+            'href': 'https://assets.weimgs.com/weimgs/ab/images/wcm/products/202127/0471/reid-utensil-holder-m.jpg',
+            'height': 363
+          },
+          'images': [
+            {
+              'size': 'm',
+              'meta': '',
+              'alt': '',
+              'rel': 'althero',
+              'width': 363,
+              'href': 'https://assets.weimgs.com/weimgs/ab/images/wcm/products/202126/1329/reid-kitchen-collection-1-m.jpg',
+              'height': 363
+            }
+          ],
+          'swatches': [],
+          'messages': [],
+          'flags': [
+            {
+              'bopisSuppress': false,
+              'rank': 3,
+              'id': 'newcore'
+            }
+          ],
+          'reviews': {
+            'recommendationCount': 0,
+            'likelihood': 0,
+            'reviewCount': 0,
+            'averageRating': 0,
+            'id': 'reid-utensil-holder-d12402',
+            'type': 'GROUP_REVIEWS'
+          }
+        },
+        {
+          'id': 'reid-paper-towel-holder-d12403',
+          'name': 'Reid Paper Towel Holder',
+          'links': {
+            'www': 'https://www.westelm.com/products/reid-paper-towel-holder-d12403/'
+          },
+          'price': {
+            'regular': 28,
+            'selling': 28
+          },
+          'thumbnail': {
+            'size': 'm',
+            'meta': '',
+            'alt': '',
+            'rel': 'thumbnail',
+            'width': 363,
+            'href': 'https://assets.weimgs.com/weimgs/ab/images/wcm/products/202127/0471/reid-paper-towel-holder-m.jpg',
+            'height': 363
+          },
+          'hero': {
+            'size': 'm',
+            'meta': '',
+            'alt': '',
+            'rel': 'hero',
+            'width': 363,
+            'href': 'https://assets.weimgs.com/weimgs/ab/images/wcm/products/202127/0471/reid-paper-towel-holder-m.jpg',
+            'height': 363
+          },
+          'images': [
+            {
+              'size': 'm',
+              'meta': '',
+              'alt': '',
+              'rel': 'althero',
+              'width': 363,
+              'href': 'https://assets.weimgs.com/weimgs/ab/images/wcm/products/202126/0277/reid-kitchen-collection-1-m.jpg',
+              'height': 363
+            },
+            {
+              'size': 'm',
+              'meta': '',
+              'alt': '',
+              'rel': 'althero',
+              'width': 363,
+              'href': 'https://assets.weimgs.com/weimgs/ab/images/wcm/products/202127/0471/reid-paper-towel-holder-1-m.jpg',
+              'height': 363
+            }
+          ],
+          'swatches': [],
+          'messages': [],
+          'flags': [
+            {
+              'bopisSuppress': false,
+              'rank': 3,
+              'id': 'newcore'
+            }
+          ],
+          'reviews': {
+            'recommendationCount': 0,
+            'likelihood': 0,
+            'reviewCount': 0,
+            'averageRating': 0,
+            'id': 'reid-paper-towel-holder-d12403',
+            'type': 'GROUP_REVIEWS'
+          }
+        },
+        {
+          'id': 'decorative-marble-drawer-pull-d12397',
+          'name': 'Decorative Marble Drawer Pull',
+          'links': {
+            'www': 'https://www.westelm.com/products/decorative-marble-drawer-pull-d12397/'
+          },
+          'price': {
+            'regular': 24,
+            'selling': 24
+          },
+          'thumbnail': {
+            'size': 'm',
+            'meta': '',
+            'alt': '',
+            'rel': 'thumbnail',
+            'width': 363,
+            'href': 'https://assets.weimgs.com/weimgs/ab/images/wcm/products/202126/0289/decorative-marble-knobs-1-m.jpg',
+            'height': 363
+          },
+          'hero': {
+            'size': 'm',
+            'meta': '',
+            'alt': '',
+            'rel': 'hero',
+            'width': 363,
+            'href': 'https://assets.weimgs.com/weimgs/ab/images/wcm/products/202126/0289/decorative-marble-knobs-1-m.jpg',
+            'height': 363
+          },
+          'images': [
+            {
+              'size': 'm',
+              'meta': '',
+              'alt': '',
+              'rel': 'althero',
+              'width': 363,
+              'href': 'https://assets.weimgs.com/weimgs/ab/images/wcm/products/202126/0289/decorative-marble-knobs-m.jpg',
+              'height': 363
+            },
+            {
+              'size': 'm',
+              'meta': '',
+              'alt': '',
+              'rel': 'althero',
+              'width': 363,
+              'href': 'https://assets.weimgs.com/weimgs/ab/images/wcm/products/202126/0289/decorative-marble-knobs-2-m.jpg',
+              'height': 363
+            },
+            {
+              'size': 'm',
+              'meta': '',
+              'alt': '',
+              'rel': 'althero',
+              'width': 363,
+              'href': 'https://assets.weimgs.com/weimgs/ab/images/wcm/products/202126/0289/decorative-marble-knobs-3-m.jpg',
+              'height': 363
+            }
+          ],
+          'swatches': [],
+          'messages': [],
+          'flags': [
+            {
+              'bopisSuppress': false,
+              'rank': 3,
+              'id': 'newcore'
+            }
+          ],
+          'reviews': {
+            'recommendationCount': 0,
+            'likelihood': 0,
+            'reviewCount': 0,
+            'averageRating': 0,
+            'id': 'decorative-marble-drawer-pull-d12397',
+            'type': 'GROUP_REVIEWS'
+          }
+        },
+        {
+          'id': 'normandy-laundry-baskets-d12396',
+          'name': 'Normandy Laundry Baskets',
+          'links': {
+            'www': 'https://www.westelm.com/products/normandy-laundry-baskets-d12396/'
+          },
+          'price': {
+            'regular': 178,
+            'selling': 178
+          },
+          'thumbnail': {
+            'size': 'm',
+            'meta': '',
+            'alt': '',
+            'rel': 'thumbnail',
+            'width': 363,
+            'href': 'https://assets.weimgs.com/weimgs/ab/images/wcm/products/202127/0332/normandy-laundry-baskets-m.jpg',
+            'height': 363
+          },
+          'hero': {
+            'size': 'm',
+            'meta': '',
+            'alt': '',
+            'rel': 'hero',
+            'width': 363,
+            'href': 'https://assets.weimgs.com/weimgs/ab/images/wcm/products/202127/0332/normandy-laundry-baskets-m.jpg',
+            'height': 363
+          },
+          'images': [
+            {
+              'size': 'm',
+              'meta': '',
+              'alt': '',
+              'rel': 'althero',
+              'width': 363,
+              'href': 'https://assets.weimgs.com/weimgs/ab/images/wcm/products/202126/0239/normandy-baskets-1-m.jpg',
+              'height': 363
+            }
+          ],
+          'swatches': [],
+          'messages': [],
+          'flags': [
+            {
+              'bopisSuppress': false,
+              'rank': 3,
+              'id': 'newcore'
+            }
+          ],
+          'reviews': {
+            'recommendationCount': 0,
+            'likelihood': 0,
+            'reviewCount': 0,
+            'averageRating': 0,
+            'id': 'normandy-laundry-baskets-d12396',
+            'type': 'GROUP_REVIEWS'
+          }
+        },
+        {
+          'id': 'normandy-storage-trunks-d12395',
+          'name': 'Normandy Storage Trunks',
+          'links': {
+            'www': 'https://www.westelm.com/products/normandy-storage-trunks-d12395/'
+          },
+          'price': {
+            'regular': 400,
+            'selling': 400
+          },
+          'thumbnail': {
+            'size': 'm',
+            'meta': '',
+            'alt': '',
+            'rel': 'thumbnail',
+            'width': 363,
+            'href': 'https://assets.weimgs.com/weimgs/ab/images/wcm/products/202126/1170/normandy-baskets-1-m.jpg',
+            'height': 363
+          },
+          'hero': {
+            'size': 'm',
+            'meta': '',
+            'alt': '',
+            'rel': 'hero',
+            'width': 363,
+            'href': 'https://assets.weimgs.com/weimgs/ab/images/wcm/products/202126/1170/normandy-baskets-1-m.jpg',
+            'height': 363
+          },
+          'images': [],
+          'swatches': [],
+          'messages': [],
+          'flags': [
+            {
+              'bopisSuppress': false,
+              'rank': 3,
+              'id': 'newcore'
+            }
+          ],
+          'reviews': {
+            'recommendationCount': 0,
+            'likelihood': 0,
+            'reviewCount': 0,
+            'averageRating': 0,
+            'id': 'normandy-storage-trunks-d12395',
+            'type': 'GROUP_REVIEWS'
+          }
+        },
+        {
+          'id': 'handled-rivergrass-rectangular-baskets-d12398',
+          'name': 'Handled Rivergrass Rectangular Baskets',
+          'links': {
+            'www': 'https://www.westelm.com/products/handled-rivergrass-rectangular-baskets-d12398/'
+          },
+          'price': {
+            'regular': 92,
+            'selling': 92
+          },
+          'thumbnail': {
+            'size': 'm',
+            'meta': '',
+            'alt': '',
+            'rel': 'thumbnail',
+            'width': 363,
+            'href': 'https://assets.weimgs.com/weimgs/ab/images/wcm/products/202126/0914/handled-rivergrass-baskets-set-of-3-m.jpg',
+            'height': 363
+          },
+          'hero': {
+            'size': 'm',
+            'meta': '',
+            'alt': '',
+            'rel': 'hero',
+            'width': 363,
+            'href': 'https://assets.weimgs.com/weimgs/ab/images/wcm/products/202126/0914/handled-rivergrass-baskets-set-of-3-m.jpg',
+            'height': 363
+          },
+          'images': [
+            {
+              'size': 'm',
+              'meta': '',
+              'alt': '',
+              'rel': 'althero',
+              'width': 363,
+              'href': 'https://assets.weimgs.com/weimgs/ab/images/wcm/products/202126/0238/handled-rivergrass-baskets-set-of-3-7-m.jpg',
+              'height': 363
+            }
+          ],
+          'swatches': [],
+          'messages': [],
+          'flags': [
+            {
+              'bopisSuppress': false,
+              'rank': 3,
+              'id': 'newcore'
+            }
+          ],
+          'reviews': {
+            'recommendationCount': 0,
+            'likelihood': 0,
+            'reviewCount': 0,
+            'averageRating': 0,
+            'id': 'handled-rivergrass-rectangular-baskets-d12398',
+            'type': 'GROUP_REVIEWS'
+          }
+        },
+        {
+          'id': 'keira-6-drawer-dresser-h8799',
+          'name': 'Keira 6-Drawer Dresser',
+          'links': {
+            'www': 'https://www.westelm.com/products/keira-6-drawer-dresser-h8799/'
+          },
+          'price': {
+            'regular': 1399,
+            'selling': 1399
+          },
+          'thumbnail': {
+            'size': 'm',
+            'meta': '',
+            'alt': '',
+            'rel': 'thumbnail',
+            'width': 363,
+            'href': 'https://assets.weimgs.com/weimgs/ab/images/wcm/products/202128/0296/keira-6-drawer-dresser-m.jpg',
+            'height': 363
+          },
+          'hero': {
+            'size': 'm',
+            'meta': '',
+            'alt': '',
+            'rel': 'hero',
+            'width': 363,
+            'href': 'https://assets.weimgs.com/weimgs/ab/images/wcm/products/202128/0296/keira-6-drawer-dresser-m.jpg',
+            'height': 363
+          },
+          'images': [
+            {
+              'size': 'm',
+              'meta': '',
+              'alt': '',
+              'rel': 'althero',
+              'width': 363,
+              'href': 'https://assets.weimgs.com/weimgs/ab/images/wcm/products/202128/0316/keira-6-drawer-dresser-m.jpg',
+              'height': 363
+            }
+          ],
+          'swatches': [],
+          'messages': [],
+          'flags': [
+            {
+              'bopisSuppress': false,
+              'rank': 3,
+              'id': 'newcore'
+            }
+          ],
+          'reviews': {
+            'recommendationCount': 0,
+            'likelihood': 0,
+            'reviewCount': 0,
+            'averageRating': 0,
+            'id': 'keira-6-drawer-dresser-h8799',
+            'type': 'GROUP_REVIEWS'
+          }
+        },
+        {
+          'id': 'thick-metal-wall-mirror-rectangle-d12400',
+          'name': 'Thick Metal Wall Mirror - Rectangle',
+          'links': {
+            'www': 'https://www.westelm.com/products/thick-metal-wall-mirror-rectangle-d12400/'
+          },
+          'price': {
+            'regular': 299,
+            'selling': 299
+          },
+          'thumbnail': {
+            'size': 'm',
+            'meta': '',
+            'alt': '',
+            'rel': 'thumbnail',
+            'width': 363,
+            'href': 'https://assets.weimgs.com/weimgs/ab/images/wcm/products/202126/0820/thick-metal-wall-mirror-3-m.jpg',
+            'height': 363
+          },
+          'hero': {
+            'size': 'm',
+            'meta': '',
+            'alt': '',
+            'rel': 'hero',
+            'width': 363,
+            'href': 'https://assets.weimgs.com/weimgs/ab/images/wcm/products/202126/0820/thick-metal-wall-mirror-3-m.jpg',
+            'height': 363
+          },
+          'images': [
+            {
+              'size': 'm',
+              'meta': '',
+              'alt': '',
+              'rel': 'althero',
+              'width': 363,
+              'href': 'https://assets.weimgs.com/weimgs/ab/images/wcm/products/202126/0820/thick-metal-wall-mirror-1-m.jpg',
+              'height': 363
+            },
+            {
+              'size': 'm',
+              'meta': '',
+              'alt': '',
+              'rel': 'althero',
+              'width': 363,
+              'href': 'https://assets.weimgs.com/weimgs/ab/images/wcm/products/202126/0820/thick-metal-wall-mirror-m.jpg',
+              'height': 363
+            },
+            {
+              'size': 'm',
+              'meta': '',
+              'alt': '',
+              'rel': 'althero',
+              'width': 363,
+              'href': 'https://assets.weimgs.com/weimgs/ab/images/wcm/products/202126/0822/thick-metal-wall-mirror-2-m.jpg',
+              'height': 363
+            },
+            {
+              'size': 'm',
+              'meta': '',
+              'alt': '',
+              'rel': 'althero',
+              'width': 363,
+              'href': 'https://assets.weimgs.com/weimgs/ab/images/wcm/products/202126/0822/thick-metal-wall-mirror-m.jpg',
+              'height': 363
+            }
+          ],
+          'swatches': [],
+          'messages': [],
+          'flags': [
+            {
+              'bopisSuppress': false,
+              'rank': 3,
+              'id': 'newcore'
+            }
+          ],
+          'reviews': {
+            'recommendationCount': 0,
+            'likelihood': 0,
+            'reviewCount': 0,
+            'averageRating': 0,
+            'id': 'thick-metal-wall-mirror-rectangle-d12400',
+            'type': 'GROUP_REVIEWS'
+          }
+        },
+        {
+          'id': 'keira-7-drawer-dresser-h8800',
+          'name': 'Keira 7-Drawer Dresser',
+          'links': {
+            'www': 'https://www.westelm.com/products/keira-7-drawer-dresser-h8800/'
+          },
+          'price': {
+            'regular': 1599,
+            'selling': 1599
+          },
+          'thumbnail': {
+            'size': 'm',
+            'meta': '',
+            'alt': '',
+            'rel': 'thumbnail',
+            'width': 363,
+            'href': 'https://assets.weimgs.com/weimgs/ab/images/wcm/products/202128/0298/keira-7-drawer-dresser-1-m.jpg',
+            'height': 363
+          },
+          'images': [
+            {
+              'size': 'm',
+              'meta': '',
+              'alt': '',
+              'rel': 'althero',
+              'width': 363,
+              'href': 'https://assets.weimgs.com/weimgs/ab/images/wcm/products/202128/0299/keira-7-drawer-dresser-6-m.jpg',
+              'height': 363
+            },
+            {
+              'size': 'm',
+              'meta': '',
+              'alt': '',
+              'rel': 'althero',
+              'width': 363,
+              'href': 'https://assets.weimgs.com/weimgs/ab/images/wcm/products/202128/0298/keira-7-drawer-dresser-m.jpg',
+              'height': 363
+            },
+            {
+              'size': 'm',
+              'meta': '',
+              'alt': '',
+              'rel': 'althero',
+              'width': 363,
+              'href': 'https://assets.weimgs.com/weimgs/ab/images/wcm/products/202128/0299/keira-7-drawer-dresser-4-m.jpg',
+              'height': 363
+            },
+            {
+              'size': 'm',
+              'meta': '',
+              'alt': '',
+              'rel': 'althero',
+              'width': 363,
+              'href': 'https://assets.weimgs.com/weimgs/ab/images/wcm/products/202128/0299/keira-7-drawer-dresser-5-m.jpg',
+              'height': 363
+            },
+            {
+              'size': 'm',
+              'meta': '',
+              'alt': '',
+              'rel': 'althero',
+              'width': 363,
+              'href': 'https://assets.weimgs.com/weimgs/ab/images/wcm/products/202128/0299/keira-7-drawer-dresser-1-m.jpg',
+              'height': 363
+            },
+            {
+              'size': 'm',
+              'meta': '',
+              'alt': '',
+              'rel': 'althero',
+              'width': 363,
+              'href': 'https://assets.weimgs.com/weimgs/ab/images/wcm/products/202128/0299/keira-7-drawer-dresser-m.jpg',
+              'height': 363
+            },
+            {
+              'size': 'm',
+              'meta': '',
+              'alt': '',
+              'rel': 'althero',
+              'width': 363,
+              'href': 'https://assets.weimgs.com/weimgs/ab/images/wcm/products/202128/0299/keira-7-drawer-dresser-3-m.jpg',
+              'height': 363
+            }
+          ],
+          'swatches': [],
+          'messages': [],
+          'flags': [
+            {
+              'bopisSuppress': false,
+              'rank': 3,
+              'id': 'newcore'
+            }
+          ],
+          'reviews': {
+            'recommendationCount': 0,
+            'likelihood': 0,
+            'reviewCount': 0,
+            'averageRating': 0,
+            'id': 'keira-7-drawer-dresser-h8800',
+            'type': 'GROUP_REVIEWS'
+          }
+        }
+      ]
+    }
+    let splide = null
+    function openModal(index) {
+    if (!data.groups[index].images.length) return
+
+    document.getElementById('modal-1-title').innerHTML = data.groups[index].name
+    const carousal = document.getElementById('splide__list')
+    carousal.innerHTML = data.groups[index].images.map((item, index) => {
+        return `<li class="splide__slide"><img src="${item.href}"></li>`
+    }).join('')
+     MicroModal.show('modal-1')
+    if (splide) splide.destroy(true);
+    splide = new Splide('.splide').mount().refresh()
+
+}
+
+
+    window.addEventListener('DOMContentLoaded', function () {
+      const productListParentElement = document.getElementById('product-list')
+
+      productListParentElement.innerHTML = data.groups.map((item, index) => {
+        const style = item.images.length ? 'cursor:pointer' : ''
+
+        return `
+  <div class='products' onclick="openModal(${index})" style="${style}">
+      <img src='${item.thumbnail.href}' height='${item.thumbnail.height}'/>
+      <div class='product-text-region'>
+          <div class='product-name'>${item.name}</div>
+          <div class='product-prices'>
+
+            <div class='product-price-regular'>Regular Price: ${item.priceRange ? '$' + item.priceRange.selling.high : '$' + item.price.regular}</div>
+            <div class='product-price-sale'>Sales Price: ${item.priceRange ? '$' + item.priceRange.selling.low : '$' + item.price.selling}</div>
+          </div>
+      </div>
+  </div>`
+      }).join('')
+      /*fetch('https://www.westelm.com/services/catalog/v4/category/shop/new/all-new/index.json').then(res=>res.json())
+      .then(data => {
+          let prods = data.groups.map((item)=>{console.log(item.hero.href); return `
+              <div class='products' onclick='modalopener("${index}")'>
+                  <img src='${item.thumbnail.href}' height='${item.thumbnail.height}'/>
+                  <div class='product-text-region'>
+                      <div class='product-name'>${item.name}</div>
+                      <div class='product-prices'>
+                          <div class='product-price-regular'>Regular Price: ${item.priceRange ? '$'+item.priceRange.selling.high : '$'+item.price.regular}</div>
+                          <div class='product-price-sale'>Sales Price: ${item.priceRange ? '$'+item.priceRange.selling.low :'$'+item.price.selling}</div>
+                      </div>
+                  </div>
+              </div>`
+          });
+          prod_list.innerHTML=prods.join('\n');
+      }).catch(e=>console.log(e));*/
+    })
+
+    // let url = 'https://www.westelm.com/services/catalog/v4/category/shop/new/all-new/index.json';
+
+
+    // fetch(url)
+    //   .then(res => res.json())
+    //   .then(out =>
+    //     console.log('Checkout this JSON! ', out))
+    //   .catch(err => console.log(err));
+
+    //const faren = [3, 7, 8];
+
+
+
+  </script>
+
+</body>
+
+</html>
