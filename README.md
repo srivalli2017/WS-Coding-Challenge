@@ -51,10 +51,15 @@ This is the Mobile view with overlay with a carousal of all thumbnail images
 
 
 
-## Testing
+## Unit Testing using Jest
 
 
-'ve used Jest and `@testing-library/react`to write unit tests to test the basic functionality of the application. Since the application is all cleint side, there are not too many test cases that I could execute. But I picked the following testcases and successfully tested them.
+'ve used Jest and `@testing-library/react`to write unit tests to test the basic functionality of the application. Since the application is all cleint side, there are not too many test cases that I could execute. But I picked the following testcases and successfully ran them.
+![logs1](https://user-images.githubusercontent.com/87400434/125831230-f3ecead0-eb21-420a-8470-c8243e40e557.jpg)
+![logs2](https://user-images.githubusercontent.com/87400434/125831351-6bed6839-96b8-42dd-bd62-9da58e4aea93.jpg)
+
+
+
 
 
 ## Data Fetch
@@ -78,4 +83,10 @@ Then hit the following proxy API endpoint to get the data:
 
 instead of 
 `https://www.westelm.com/services/catalog/v4/category/shop/new/all-new/index.json`
+
+
+However, this connection was unstable and was ocasionally throwing an error on fetch.
+
+So I decided to remove this and just hard code the data for this exercise.
+
 
